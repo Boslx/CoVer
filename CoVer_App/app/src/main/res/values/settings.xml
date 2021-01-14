@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--  Analytics -->
+    <integer name="minimumMinutesExposed">15</integer>
+    <integer name="maxTimeSpanSinceLastContact">72000</integer>
+
+<!-- App -->
+    <integer name="BackgroundScanPeriod">1000</integer>
+    <integer name="BackgroundBetweenScanPeriod">2001</integer>
+    <integer name="ForegroundScanPeriod">1000</integer>
+
+<!-- MainActivity -->
+    <integer name="UpdateInfectionCooldown">20000</integer>
+    <integer name="bgCheckDelay">600000</integer>
+
+<!-- Bluetooth Fragment -->
+    <integer name="RefreshIDIntervallSeconds">60</integer>
+    <integer name="maxDistanceFromPhoneMeters">15</integer>
+
+</resources>

@@ -1,0 +1,70 @@
+version: '3'
+services:
+  database:
+    image: postgres
+    container_name: Cover_Database
+    env_file:
+      - database.env
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'database-data:/var/lib/postgresql/data/'
+
+  databaseBackups:
+    image: prodrigestivill/postgres-backup-local
+    container_name: Cover_DatabaseBackup
+    restart: unless-stopped
+    user: postgres:postgres
+    volumes:
+      - /var/opt/pgbackups:/backups
+    links:
+      - database
+    depends_on:
+      - database
+    env_file:
+      - database.env
+    environment:
+      - SCHEDULE=@daily
+      - BACKUP_KEEP_DAYS=7
+      - BACKUP_KEEP_WEEKS=4
+      - BACKUP_KEEP_MONTHS=6
+      - HEALTHCHECK_PORT=8080
+
+  coverbackend:
+    container_name: CoVer_Backend
+    build:
+      context: .
+      dockerfile: CoVer_Server/Dockerfile
+    depends_on:
+      - database
+    networks:
+      traefik_default:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.cover.rule=Host(`api.cover.<domain>`)
+      - traefik.http.routers.cover.entrypoints=websecure
+      - traefik.http.routers.cover.tls.certresolver=buypass
+      - traefik.docker.network=traefik_default
+  website:
+    image: sebp/lighttpd
+    container_name: Cover_Website
+    restart: unless-stopped
+    depends_on:
+      - coverbackend
+    volumes:
+      - '/opt/containers/CoVer_Server/html:/var/www/'
+      - '/opt/containers/CoVer_Server/lightconfig:/etc/lighttpd/'
+    networks:
+      traefik_default:
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.coverWebsites.rule=Host(`cover.<domain>`)
+      - traefik.http.routers.coverWebsites.middlewares=secHeaders@file
+      - traefik.http.routers.coverWebsites.entrypoints=websecure
+      - traefik.http.routers.coverWebsites.tls.certresolver=buypass
+      - traefik.docker.network=traefik_default
+volumes:
+  database-data:
+networks:
+  traefik_default:
+    external: true

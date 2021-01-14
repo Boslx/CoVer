@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.homescreen.TrackingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="?attr/colorPrimaryVariant"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/cover_background_1"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardActivateProtection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/boxColor"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Schutzeinstellungen"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="?attr/textColor"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/text_Protection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Aktivieren Sie den Schutz, um sich selbst und andere zu schützen."
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?attr/textColor"
+                            android:textSize="18sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_protection"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:background="?attr/boxColor"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardReportInfection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/boxColor"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/text_HomeDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ergebnis teilen"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="?attr/textColor"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/text_HomeDateExplain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Sie wurden positiv auf Covid-19 getestet? Teilen Sie hier ihre Infektion."
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?attr/textColor"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/report_infection_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:textColor="?attr/textColorLight"
+                            android:backgroundTint="@color/red_NICE"
+                            android:text="Infektion Melden" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardContactUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/boxColor"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/text_ContactUs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fragen?"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="?attr/textColor"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/text_ContactUsExplain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Sollten Sie Fragen zu der App CoVer haben, können Sie
+uns über die folgende E-Mail kontaktieren:"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?attr/textColor"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/button_contactUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:backgroundTint="@color/blue_NICE"
+                            android:layout_gravity="center"
+                            android:textColor="?attr/textColorLight"
+                            android:text="cover@<domain>" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardDarkTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/boxColor"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <Switch
+                            android:id="@+id/dark_mode_switch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="?attr/textColor"
+                            android:textSize="18sp"
+                            android:text="Dark Theme" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

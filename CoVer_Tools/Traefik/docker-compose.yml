@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+  traefik:
+    image: "traefik:v2.3.4"
+    container_name: traefik
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+    # Die Linken Pfade so anpassen, dass sie deinen ensprechen
+      - "<Pfad>/traefik-data/acme.json:/etc/traefik/acme/acme.json"
+      - "<Pfad>/traefik-data/dynamic.yml:/etc/traefik/dynamic.yml"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+
+      - "--providers.file.filename=/etc/traefik/dynamic.yml"
+      - "--providers.file.watch=true"
+
+      - "--api.dashboard=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.buypass.acme.httpchallenge=true"
+      - "--certificatesresolvers.buypass.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.buypass.acme.caserver=https://api.buypass.com/acme/directory"
+      - "--certificatesresolvers.buypass.acme.email=<DeineEmail>"
+      - "--certificatesresolvers.buypass.acme.storage=/etc/traefik/acme/acme.json"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.api.rule=Host(`traefik.<domain>`)"
+      - "traefik.http.routers.api.service=api@internal"
+      - "traefik.http.routers.api.middlewares=auth"
+      # Lies dir das hier durch https://doc.traefik.io/traefik/middlewares/basicauth/
+      - "traefik.http.middlewares.auth.basicauth.users=<Username>:<MD5 Passwort>/"
+      - "traefik.http.routers.api.entrypoints=websecure"
+      - "traefik.http.routers.api.tls.certresolver=buypass"    
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - portainer_data:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portainer.rule=Host(`portainer.<domain>`)"
+      - "traefik.http.routers.portainer.entrypoints=websecure"
+      - "traefik.http.routers.portainer.tls.certresolver=buypass"
+      - "traefik.http.routers.portainer.service=portainer"
+      - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+      
+volumes: 
+  portainer_data: 
+    external: false

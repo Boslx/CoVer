@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.infection_status.InfectionRiskDialogFragment"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:paddingTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="?dialogPreferredPadding"
+            android:paddingEnd="?dialogPreferredPadding">
+
+            <TextView
+                android:id="@+id/firstTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Infektionsrisiko" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingRight="25dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Sie waren über einen längeren Zeitraum mit erkrankten Personen im Kontakt" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingRight="25dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:text="Für detaillierte Informationen tippen Sie bitte auf 'Weitere Informationen'" />
+
+            <TextView
+                android:id="@+id/input_dialog_error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                tools:text="Error"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?dialogPreferredPadding"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/weitere_informationen_button"
+                android:background="@drawable/stroke_bg"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:textSize="16dp"
+                android:contextClickable="true"
+                android:onClick="infectionDetectedTest"
+                android:text="Weitere Informationen"/>
+
+        </LinearLayout>
+    </LinearLayout>

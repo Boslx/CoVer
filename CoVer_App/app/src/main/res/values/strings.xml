@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">CoVer_A0.1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">CoVer Alpha</string>
+    <string name="nav_header_subtitle">SARS-CoV-2-Nachverfolgung. Tracing App für das LabSWP20WS</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Bluetooth Testing</string>
+    <string name="menu_gallery">EphID Testing</string>
+    <string name="menu_slideshow">Backend Testing</string>
+
+    <string name="infektionsRisikoText">Das Infektionsrisiko wird anhand der Daten der Risiko-Ermittlung unter Berücksichtigung
+    von Abstand und Dauer lokal auf Ihrem Smartphone berechnet. Ihr Infektionsrisiko ist für niemanden einsehbar und wird nicht weitergegeben</string>
+
+    <string name="haende_waschen_text">Waschen Sie ihre Hände regelmäßig mit Seife für 20 Sekunden.</string>
+    <string name="mund_nasen_schutz_text">Tragen Sie einen Mund-Nasen-Schutz bei Begegnungen mit anderen Personen.</string>
+    <string name="abstand_text">Halten Sie mindestens 1,5 Meter Abstand zu anderen Personen.</string>
+    <string name="armbeuge_text">Niesen oder Husten Sie in die Armbeuge oder ein Taschentuch.</string>
+    <string name="risiko_ermittlung_text_1">Die Berechnung des Infektionsrisikos kann nur für die Zeiträume erfolgen, an denen die Risiko-Ermittlung
+    aktiv war. Die Risiko-Ermittlung sollte daher dauerhaft aktiv sein.</string>
+    <string name="risiko_ermittlung_text_2">Für ihre Risiko-Ermittlung wird nur der Zeitraum der letzten 14 Tage betrachtet. Ältere Tage werden
+    automatisch gelöscht, da sie aus Sicht des Infektionsschutzes nicht mehr relevant sind.</string>
+    <string name="risiko_ermittlung_text_3">Weitere Informationen finden sie in der FAQ.</string>
+    <string name="title_activity_status_info">StatusInfoActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="behavior_in_case_of_infection">Lassen Sie sich telefonisch beraten:
+        Rufen Sie den ärztlichen Bereitschaftsdienst unter der Telefonnummer 116117,
+        eine lokale Corona-Hotline, die Hausarztpraxis, eine andere behandelnde Ärztin bzw.
+        einen Arzt oder eine Fieberambulanz an. Diese Kontaktstellen informieren über das
+        weitere Vorgehen. Falls Sie einer Risikogruppe angehören, weisen Sie darauf hin. Wenn Sie
+        nicht gleich jemanden erreichen, versuchen Sie es erneut. In Notfällen, zum Beispiel bei
+        akuter Atemnot, sollten Sie die Notfallnummer 112 anrufen. Um sich und andere zu schützen,
+        sollten Sie auf keinen Fall ohne vorherige telefonische
+        Anmeldung eine Arztpraxis aufsuchen.</string>
+    <string name="infection_behavior_in_app">Um andere Nutzende Personen dieser App zu schützen, können
+        Sie Ihre Infektion anonym Melden. Durch das Melden der Infektion können keine Rückschlüsse
+        auf Sie als Person geschlossen werden, Sie bleiben weiterhin komplett anonym.
+        Zum melden Ihrer Infektion, gehen sie auf "BUTTON".
+        Geben sie in dem Neuen Fenster nun Ihren VON WO AUCH IMMER erhaltenen Validierungscode ein
+        und tippen Sie auf vortfahren.</string>
+
+
+</resources>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cover_a01.ui.infection_status.StatusInfoFragment"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?attr/colorPrimaryVariant"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/cover_background_3"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="0dp">
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorRed"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Ihr Risikostatus: Es bestand Kontakt mit erkrankten."
+                        android:textSize="28dp" />
+                </TableRow>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_RisikoErmittelt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/boxColor"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/infectionRiskCalculationHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="So wird ihr Risiko ermittelt"
+                            android:textColor="?attr/textColor"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/infectionRiskCalculation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:paddingRight="45dp"
+                            android:text="@string/infektionsRisikoText"
+                            android:textColor="?attr/textColor"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_Infektionsrisiko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/boxColor"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/infectionRiskHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Infektionsrisiko"
+                    android:textColor="?attr/textColor"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/infectionRiskExplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="Die App zeigt Ihnen die folgenden Infektionsrisiken an:"
+                    android:textColor="?attr/textColor"
+                    android:textSize="18sp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/greyInfectionRisk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/circle"
+                        app:tint="@color/cover_dark_grey" />
+
+                    <TextView
+                        android:id="@+id/greyInfectionRiskText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="Die Risikoermittlung ist nicht aktiv. Bitte überprüfen Sie die Berechtigungen der App."
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/lightgreyInfectionRisk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/circle"
+                        app:tint="@color/light_grey" />
+
+                    <TextView
+                        android:id="@+id/lightgreyInfectionRiskText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="	Ihr Risiko wird gerade berechnet. Bitte warten Sie kurz."
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/greenInfectionRisk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/circle"
+                        app:tint="@color/green_NICE" />
+
+                    <TextView
+                        android:id="@+id/greenInfectionRiskText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="Die App fand keine Begegunungen, die zu einer Infektion führen können."
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/redLowInfectionRisk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/circle"
+                        app:tint="@color/red_lowRisk_NICE" />
+
+                    <TextView
+                        android:id="@+id/redLowInfectionRiskText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="Sie hatten Begegnungen mit geringerem Infektionsrisiko. Bitte achten Sie auf mögliche Symptome. Es besteht kein direkter Handlungsbedarf."
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/redInfectionRisk"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/circle"
+                        app:tint="@color/red_NICE" />
+
+                    <TextView
+                        android:id="@+id/redInfectionRiskText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="Sie hatten Risikobegegnungen! Bitte kontaktieren Sie ihr lokales Gesundheitsamt. Bei dem Auftritt von Symptomen lassen Sie sich bitte Testen."
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+                </TableRow>
+
+
+            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_Verhalten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/boxColor"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/behaviourHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verhalten"
+                    android:textColor="?attr/textColor"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/behaviour1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="So verhalten Sie sich richtig:"
+                    android:textColor="?attr/textColor"
+                    android:textSize="18sp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/behaviourMaskImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/frau" />
+
+                    <TextView
+                        android:id="@+id/behaviourMaskText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="@string/mund_nasen_schutz_text"
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/behaviourDistanceImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/soziale_distanzierung" />
+
+                    <TextView
+                        android:id="@+id/behaviourDistanceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="@string/abstand_text"
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/behaviourCleaningImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/handwasche" />
+
+                    <TextView
+                        android:id="@+id/behaviourCleaningText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="@string/haende_waschen_text"
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/behaviourSneezingImage"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/niesen" />
+
+                    <TextView
+                        android:id="@+id/behaviourSneezingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="60dp"
+                        android:text="@string/armbeuge_text"
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp" />
+
+                </TableRow>
+
+            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_InfektionsErklärung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/boxColor"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/explanationInfectionRiskHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:text="Informationen zur Funktionsweise der Risiko-Ermittlung"
+                    android:textColor="?attr/textColor"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/explanationInfectionRiskText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="@string/risiko_ermittlung_text_1"
+                    android:textColor="?attr/textColor"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/explanationInfectionRiskText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:text="@string/risiko_ermittlung_text_2"
+                    android:textColor="?attr/textColor"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</LinearLayout>

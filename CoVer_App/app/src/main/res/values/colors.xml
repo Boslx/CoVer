@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorGreen">#0ca717</color>
+    <color name="colorRed">#8C0A13</color>
+
+<!--    new lighter color theme-->
+    <color name="cover_light_grey">#5D616B</color>
+    <color name="cover_dark_grey">#454952</color>
+
+<!--    OG color theme-->
+<!--    <color name="cover_light_grey">#444f5a</color>-->
+<!--    <color name="cover_dark_grey">#3e4149</color>-->
+
+    <color name="cover_light_pink">#ffc8c8</color>
+    <color name="cover_dark_pink">#ff9999</color>
+    <color name="light_grey">#DCDCDC</color>
+
+    <!-- pastel color theme -->
+    <color name="green_NICE">#3DAE77</color>
+    <color name="red_NICE">#D22626</color>
+    <color name="red_lowRisk_NICE">#F18F8F</color>
+    <color name="blue_NICE">#00A2FF</color>
+    <color name="background_NICE">#D6EFEF</color>
+</resources>

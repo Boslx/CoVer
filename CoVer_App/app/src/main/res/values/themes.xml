@@ -1,0 +1,74 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CoVer_A01" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <!--        <item name="colorPrimary">@color/purple_500</item>-->
+        <!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+        <!--        <item name="colorOnPrimary">@color/white</item>-->
+        <!-- Secondary brand color. -->
+        <item name="colorPrimary">@color/cover_dark_pink</item>
+        <item name="colorPrimaryVariant">@color/background_NICE</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/blue_NICE</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="textColorDark">@color/black</item>
+        <item name="textColorLight">@color/white</item>
+        <item name="textColor">@color/black</item>
+        <item name="boxColor">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme_CoVer_Light" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/cover_dark_pink</item>
+        <item name="colorPrimaryVariant">@color/background_NICE</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/blue_NICE</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="textColorDark">@color/black</item>
+        <item name="textColorLight">@color/white</item>
+        <item name="textColor">@color/black</item>
+        <item name="boxColor">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.CoVer_A01.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.CoVer_A01.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.CoVer_A01.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CoverSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/cover_dark_pink</item>
+        <item name="android:progressTint">@color/cover_dark_pink</item>
+        <item name="android:colorControlActivated">@color/cover_light_pink</item>
+    </style>
+
+    <style name="Theme_CoVer_Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cover_dark_grey</item>
+        <item name="colorPrimaryVariant">@color/cover_dark_grey</item>
+        <item name="colorOnPrimary">@color/cover_dark_grey</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cover_light_pink</item>
+        <item name="colorSecondaryVariant">@color/cover_dark_grey</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="textColorDark">@color/black</item>
+        <item name="textColorLight">@color/white</item>
+        <item name="textColor">@color/white</item>
+        <item name="boxColor">@color/cover_light_grey</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

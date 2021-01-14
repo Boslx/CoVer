@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_bluetooth">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.cover_a01.ui.homescreen.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_bluetooth"
+        android:name="com.example.cover_a01.bluetooth.BluetoothFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_bluetooth" />
+    <fragment
+        android:id="@+id/nav_ephid"
+        android:name="com.example.cover_a01.ui.ephid.ephidFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_ephemeral" />
+    <fragment
+        android:id="@+id/nav_infec_dialog"
+        android:name="com.example.cover_a01.ui.infection_status.InfectionRiskDialogFragment"
+        android:label="fragment_infektion_risiko_dialog"
+        tools:layout="@layout/fragment_infektion_risiko_dialog" />
+    <fragment
+        android:id="@+id/nav_status_info"
+        android:name="com.example.cover_a01.ui.infection_status.StatusInfoFragment"
+        android:label="fragment_status_info"
+        tools:layout="@layout/fragment_status_info" />
+    <fragment
+        android:id="@+id/nav_infec_report"
+        android:name="com.example.cover_a01.ui.infection_report.InfectionReportDialogFragment"
+        android:label="InfectionReportDialogFragment" />
+    <fragment
+        android:id="@+id/nav_infection_risk_testing"
+        android:name="com.example.cover_a01.ui.infection_status.InfectionRiskTesting"
+        android:label="fragment_infection_risk_testing"
+        tools:layout="@layout/fragment_infection_risk_testing" />
+
+</navigation>

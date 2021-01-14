@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_NICE"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/myid"
+        android:layout_width="146dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="80dp"
+        android:text="this phones UUID"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_generateNewID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_generateNewID"
+        android:layout_width="136dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/blue_NICE"
+        android:text="Generate Random ID"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_generateNewID_custom"
+        android:layout_width="136dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+
+        android:backgroundTint="@color/blue_NICE"
+        android:text="Generate from custom HEX"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_generateNewID" />
+
+    <EditText
+        android:id="@+id/customUUID"
+        android:layout_width="185dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="5"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/btn_generateNewID_custom"
+        app:layout_constraintTop_toBottomOf="@+id/myid"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="valid : 0-9,a-f"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/customUUID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="current ID"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/myid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/externalList"
+        android:layout_width="326dp"
+        android:layout_height="402dp"
+        android:layout_marginTop="40dp"
+        android:text="external ID list"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_generateNewID_custom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
